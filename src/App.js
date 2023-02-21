@@ -7,6 +7,12 @@ function App() {
 
   const [users, setUsers] = useState([]);
 
+  const setUserHandler = (user) =>{
+    setUsers((prevState) =>{
+      return [user,...prevState];
+    });
+  };
+
   return (
     <div>
       <AddUser />
