@@ -10,12 +10,12 @@ function App() {
   const setUserHandler = (user) =>{
     setUsers((prevState) =>{
       return [user,...prevState];
-    });
+    }); 
   };
 
   return (
     <div>
-      <AddUser />
+      <AddUser setUserHandler={setUserHandler} />
       <UserList users={users}/>
 
     </div>
